@@ -12,6 +12,8 @@ public class App {
         String element = " ";
         ArrayList<String> attack = new ArrayList<>();
 
+        Capacites lanceFlamme = new Capacites("Lance flamme", "Feu", 5);
+
         fonction.print("Saisir votre nom");
         name = fonction.entry(name);
 
