@@ -5,6 +5,10 @@ public class fonction {
         System.out.println(str);
     }
 
+    public static void print(Object str){
+        System.out.println(str);
+    }
+
     public static int entry(int entry){
         entry = new Scanner(System.in).nextInt();
         return entry;

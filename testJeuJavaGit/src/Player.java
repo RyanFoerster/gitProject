@@ -5,6 +5,7 @@ public class Player {
     String genderPlayer;
     int classChoose;
     int level = 1;
+    int exp = 0;
     String element;
 
     public Player(String name, String genderPlayer, String element){

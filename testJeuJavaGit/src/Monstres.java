@@ -13,4 +13,14 @@ public class Monstres {
         this.force = force;
     }
 
+    public static Monstres newMonstres(int randChoose){
+
+        if(randChoose == 1){
+            Monstres eauQuiPique = new Monstres("EauKiPik", "eau", 1, 100, 2);
+            return eauQuiPique;
+        }
+
+        return null;
+    }
+
 }
