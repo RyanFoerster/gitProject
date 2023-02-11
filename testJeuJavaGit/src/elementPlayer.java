@@ -11,7 +11,7 @@ public class elementPlayer{
         }else if (Integer.parseInt(classChoose) == 3){
             element = "Terre";
         }else if (Integer.parseInt(classChoose) == 4){
-            element = "Electrique";
+            element = "Plante";
         }
         return element;
     }

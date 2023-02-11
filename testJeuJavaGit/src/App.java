@@ -1,14 +1,14 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+
 
 public class App {
     public static void main(String[] args) throws Exception {
     
-        String name              = " ";
-        char gender              = ' ';
-        String genderPlayer      = " ";
-        String classChoose       = "-1";
-        String element           = " ";
+        String name                 = " ";
+        char gender                 = ' ';
+        String genderPlayer         = " ";
+        String classChoose          = "-1";
+        String element              = " ";
+        Capacites[] userCapacites   = new Capacites[2];
 
         fonction.print("Saisir votre nom");
         name = fonction.entry(name);
@@ -31,23 +31,19 @@ public class App {
         
 
         Player player = new Player(name, genderPlayer, element);
-        Capacites userCapacites = Capacites.newCapacites(element);
+        userCapacites[0] = Capacites.newCapacites(element, userCapacites);
+        userCapacites[1] = Capacites.newCapacites(element, userCapacites);
 
-        fonction.print("Nom du joueur : " + player.name);
-        fonction.print("Genre du joueur : " + player.genderPlayer);
-        fonction.print("Element du joueur : " + player.element);
-        fonction.print("Niveau du joueur : " + player.level);
-        fonction.print("Attaque du joueur : " + userCapacites.nom);
-    
-
+        fonction.print("Nom : " + player.name);
+        fonction.print("Element : " + player.element);
+        fonction.print("Niveau : " + player.level);
+        fonction.print("Hp : " + player.hp);
+        
         Monstres monster = Monstres.newMonstres(1);
 
-        Combat.combat(monster, player, userCapacites);
+        Combat.combat(monster, player,userCapacites);
         
-        if(player.exp >= 100){
-            player.level++;
-            player.exp = 0;
-        }
+        
 
     }
 
