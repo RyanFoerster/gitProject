@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Capacites {
     String nom; 
     String element;
@@ -42,5 +44,14 @@ public class Capacites {
         return null;
     }
 
-
+    public static Capacites newCapacitesMonster(String element, Capacites[] monsterCapacites){
+        if(Objects.equals(element, "Feu") && monsterCapacites[0] == null){
+            Capacites braise = new Capacites("Braise", "Feu", 5);
+            return braise;
+        }else if(Objects.equals(element, "Feu") && monsterCapacites[0] == null){
+            Capacites flammeche = new Capacites("Flammèche", "Feu", 5);
+            return flammeche;
+        }
+        return  null;
+    }
 }

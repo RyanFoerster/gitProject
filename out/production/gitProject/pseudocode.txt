@@ -1,0 +1,5 @@
+Etape 1 : Base du jeu
+
+1. Creer le programme qui demande le nom, le genre et l'élément du joueur
+2. Creer les monstres du jeu
+3. Creer la progression du joueur 

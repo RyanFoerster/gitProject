@@ -5,12 +5,13 @@ public class Combat{
     public static boolean combat(Monstres monster, Player player, Capacites[] userCapacites){
 
         boolean isAlive          = true;
+        boolean userAlive        = true;
         int userInputChoose      = -1;
         int userHeal             = 3;
         int min                  = 1;
         int max                  = 5;
         int range                = max -min + 1; 
-        int rand;
+        int rand                 = 0;
 
         do{
             
@@ -29,7 +30,7 @@ public class Combat{
                 userInputChoose = fonction.entry(userInputChoose);
 
                 InfoCombat.infoCombat(player, userInputChoose, userCapacites, monster);
-                
+                userInputChoose = 0;
                 if(monster.hp <= 0){
                     isAlive = false;
                     player.exp += (monster.level * 100) / 5;
@@ -38,6 +39,7 @@ public class Combat{
 
             if(userInputChoose == 2){
                 InfoMonster.infoMonster(monster);
+                userInputChoose = 0;
             }
 
             if(userInputChoose == 3){
@@ -48,6 +50,7 @@ public class Combat{
                     }
                 }
                 userHeal--;
+                userInputChoose = 0;
             }
 
             if(userInputChoose == 4){
@@ -57,14 +60,17 @@ public class Combat{
                 }else{
                     break;
                 }
+                userInputChoose = 0;
             }
 
-        }while (isAlive);
+        }while (isAlive || userAlive);
 
         if(isAlive == false){
             fonction.print("Vous avez battu : " + monster.nom);
             fonction.print("Vous avez gagner : " + (monster.level * 100) / 5 + " expériences");
-        }else{
+        }else if(userAlive == false){
+            fonction.print("Vous avez été battu par : " + monster.nom);
+        }else if(rand != 5){
             fonction.print("Vous avez fui !");
         }
        

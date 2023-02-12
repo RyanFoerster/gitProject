@@ -3,12 +3,13 @@
 public class App {
     public static void main(String[] args) throws Exception {
     
-        String name                 = " ";
-        char gender                 = ' ';
-        String genderPlayer         = " ";
-        String classChoose          = "-1";
-        String element              = " ";
-        Capacites[] userCapacites   = new Capacites[2];
+        String name                     = " ";
+        char gender                     = ' ';
+        String genderPlayer             = " ";
+        String classChoose              = "-1";
+        String element                  = " ";
+        Capacites[] userCapacites       = new Capacites[2];
+        Capacites[] monsterCapacites    = new Capacites[2];
 
         fonction.print("Saisir votre nom");
         name = fonction.entry(name);
@@ -24,7 +25,7 @@ public class App {
         }
 
         while(Integer.parseInt(classChoose) != 1 && Integer.parseInt(classChoose) != 2 && Integer.parseInt(classChoose) != 3 && Integer.parseInt(classChoose) != 4){
-            fonction.print("Choisir votre classe : \n1. Feu\n2. Eau\n3. Terre\n4. Electrique");
+            fonction.print("Choisir votre classe : \n1. Feu\n2. Eau\n3. Terre\n4. Plante");
             classChoose = fonction.entry(classChoose);
         }
         element = elementPlayer.chooseElement(classChoose);
@@ -42,14 +43,8 @@ public class App {
         Monstres monster = Monstres.newMonstres(1);
 
         Combat.combat(monster, player,userCapacites);
-        
-        
 
     }
-
-    
-
-    
 }
 
 
