@@ -5,7 +5,7 @@ public class Player {
     int level           = 1;
     int exp             = 0;
     int hp              = 100;
-    int classChoose;
+    int force           = 10;
     String name;
     String genderPlayer;
     String element;

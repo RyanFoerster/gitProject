@@ -38,6 +38,10 @@ public class Combat{
                     isAlive = false;
                     player.exp += (monster.level * 100) / 5;
                 }
+
+                if(player.hp <= 0){
+                    userAlive = false;
+                }
             }
 
             if(userInputChoose == 2){
@@ -68,7 +72,7 @@ public class Combat{
                 userInputChoose = 0;
             }
 
-        }while (isAlive || userAlive);
+        }while (isAlive && userAlive);
 
         if(!isAlive){
             fonction.print("Vous avez battu : " + monster.nom);

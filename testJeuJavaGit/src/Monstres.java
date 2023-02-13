@@ -14,13 +14,11 @@ public class Monstres {
     }
 
     public static Monstres newMonstres(int randChoose){
-
         if(randChoose == 1){
-            Monstres eauQuiPique = new Monstres("EauKiPik", "Feu", 1, 100, 2);
-            return eauQuiPique;
+            Monstres monster = new Monstres("EauKiPik", "Feu", 1, 20, 2);
+            return monster;
         }
 
         return null;
     }
-
 }

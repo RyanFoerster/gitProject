@@ -9,24 +9,24 @@ public class InfoCombat {
                 fonction.print("Vous attaquez : " + userCapacites[0].nom);
                 if(Objects.equals(monster.element, "Plante")){
                     fonction.print("C'est super efficace ! ");
-                    monster.hp -= userCapacites[0].valeurAttaque * 2;
+                    monster.hp -= ((userCapacites[0].valeurAttaque * player.force)/8) * 2;
                 }else if(Objects.equals(monster.element, "Eau")){
                     fonction.print("C'est pas très efficace ! ");
-                    monster.hp -= userCapacites[0].valeurAttaque / 2;
+                    monster.hp -= ((userCapacites[0].valeurAttaque * player.force)/8) / 2;
                 }else{
-                    monster.hp -= userCapacites[0].valeurAttaque;
+                    monster.hp -= (userCapacites[0].valeurAttaque * player.force)/8;
                 }
             }
             if(userInputChoose == 2){
                 fonction.print("Vous attaquez : " + userCapacites[1].nom);
                 if(Objects.equals(monster.element, "Plante")){
                     fonction.print("C'est super efficace ! ");
-                    monster.hp -= userCapacites[1].valeurAttaque * 2;
+                    monster.hp -= ((userCapacites[1].valeurAttaque * player.force)/8) * 2;
                 }else if(Objects.equals(monster.element, "Eau")){
                     fonction.print("C'est pas très efficace ! ");
-                    monster.hp -= userCapacites[1].valeurAttaque / 2;
+                    monster.hp -=((userCapacites[1].valeurAttaque * player.force)/8) / 2;
                 }else{
-                    monster.hp -= userCapacites[1].valeurAttaque;
+                    monster.hp -= ((userCapacites[1].valeurAttaque * player.force)/8);
                 }
             }
         }
@@ -36,24 +36,24 @@ public class InfoCombat {
                 fonction.print("Vous attaquez : " + userCapacites[0].nom);
                 if(Objects.equals(monster.element, "Feu")){
                     fonction.print("C'est super efficace ! ");
-                    monster.hp -= userCapacites[0].valeurAttaque * 2;
+                    monster.hp -= ((userCapacites[0].valeurAttaque * player.force)/8) * 2;
                 }else if(Objects.equals(monster.element, "Plante")){
                     fonction.print("C'est pas très efficace ! ");
-                    monster.hp -= userCapacites[0].valeurAttaque / 2;
+                    monster.hp -= ((userCapacites[0].valeurAttaque * player.force)/8) / 2;
                 }else{
-                    monster.hp -= userCapacites[0].valeurAttaque;
+                    monster.hp -= (userCapacites[0].valeurAttaque * player.force) / 8;
                 }
             }
             if(userInputChoose == 2){
                 fonction.print("Vous attaquez : " + userCapacites[1].nom);
                 if(Objects.equals(monster.element, "Feu")){
                     fonction.print("C'est super efficace ! ");
-                    monster.hp -= userCapacites[1].valeurAttaque * 2;
+                    monster.hp -= ((userCapacites[1].valeurAttaque * player.force)/8) * 2;
                 }else if(Objects.equals(monster.element, "Plante")){
                     fonction.print("C'est pas très efficace ! ");
-                    monster.hp -= userCapacites[1].valeurAttaque / 2;
+                    monster.hp -= ((userCapacites[1].valeurAttaque * player.force)/8) / 2;
                 }else{
-                    monster.hp -= userCapacites[1].valeurAttaque;
+                    monster.hp -= (userCapacites[1].valeurAttaque * player.force)/8;
                 }
             }
         }
@@ -63,18 +63,18 @@ public class InfoCombat {
                 fonction.print("Vous attaquez : " + userCapacites[0].nom);
                  if(Objects.equals(monster.element, "Plante")){
                     fonction.print("C'est pas très efficace ! ");
-                    monster.hp -= userCapacites[0].valeurAttaque / 2;
+                    monster.hp -= ((userCapacites[0].valeurAttaque * player.force)/8) / 2;
                 }else{
-                    monster.hp -= userCapacites[0].valeurAttaque;
+                    monster.hp -= (userCapacites[0].valeurAttaque * player.force)/8;
                 }
             }
             if(userInputChoose == 2){
                 fonction.print("Vous attaquez : " + userCapacites[1].nom);
                 if(Objects.equals(monster.element, "Plante")){
                     fonction.print("C'est pas très efficace ! ");
-                    monster.hp -= userCapacites[1].valeurAttaque / 2;
+                    monster.hp -= ((userCapacites[1].valeurAttaque * player.force)/8) / 2;
                 }else{
-                    monster.hp -= userCapacites[1].valeurAttaque;
+                    monster.hp -= (userCapacites[1].valeurAttaque * player.force)/8;
                 }
             }
         }
@@ -84,24 +84,24 @@ public class InfoCombat {
                 fonction.print("Vous attaquez : " + userCapacites[0].nom);
                 if(Objects.equals(monster.element, "Terre")){
                     fonction.print("C'est super efficace ! ");
-                    monster.hp -= userCapacites[0].valeurAttaque * 2;
+                    monster.hp -= ((userCapacites[0].valeurAttaque * player.force)/8) * 2;
                 }else if(Objects.equals(monster.element, "Feu")){
                     fonction.print("C'est pas très efficace ! ");
-                    monster.hp -= userCapacites[0].valeurAttaque / 2;
+                    monster.hp -= ((userCapacites[0].valeurAttaque * player.force)/8) / 2;
                 }else{
-                    monster.hp -= userCapacites[0].valeurAttaque;
+                    monster.hp -= (userCapacites[0].valeurAttaque * player.force)/8;
                 }
             }
             if(userInputChoose == 2){
                 fonction.print("Vous attaquez : " + userCapacites[1].nom);
                 if(Objects.equals(monster.element, "Terre")){
                     fonction.print("C'est super efficace ! ");
-                    monster.hp -= userCapacites[1].valeurAttaque * 2;
+                    monster.hp -= ((userCapacites[1].valeurAttaque * player.force)/8) * 2;
                 }else if(Objects.equals(monster.element, "Feu")){
                     fonction.print("C'est pas très efficace ! ");
-                    monster.hp -= userCapacites[1].valeurAttaque / 2;
+                    monster.hp -= ((userCapacites[1].valeurAttaque * player.force)/8) / 2;
                 }else{
-                    monster.hp -= userCapacites[1].valeurAttaque;
+                    monster.hp -= (userCapacites[1].valeurAttaque * player.force)/8;
                 }
             }
         }
@@ -121,24 +121,24 @@ public class InfoCombat {
                 fonction.print(monstres.nom + " attaque : " + monsterCapacites[0].nom);
                 if(Objects.equals(player.element, "Plante")){
                     fonction.print("C'est super efficace ! ");
-                    player.hp -= monsterCapacites[0].valeurAttaque * 2;
+                    player.hp -= ((monsterCapacites[0].valeurAttaque * monstres.force) /5) * 2;
                 }else if(Objects.equals(player.element, "Eau")){
                     fonction.print("C'est pas très efficace ! ");
-                    player.hp -= monsterCapacites[0].valeurAttaque / 2;
+                    player.hp -= ((monsterCapacites[0].valeurAttaque * monstres.force) /5) / 2;
                 }else{
-                    player.hp -= monsterCapacites[0].valeurAttaque;
+                    player.hp -= monsterCapacites[0].valeurAttaque * monstres.force /5;
                 }
             }
             if(rand == 2){
                 fonction.print(monstres.nom + " attaque : " + monsterCapacites[1].nom);
                 if(Objects.equals(player.element, "Plante")){
                     fonction.print("C'est super efficace ! ");
-                    player.hp -= monsterCapacites[1].valeurAttaque * 2;
+                    player.hp -= ((monsterCapacites[1].valeurAttaque * monstres.force) /5) * 2;
                 }else if(Objects.equals(player.element, "Eau")){
                     fonction.print("C'est pas très efficace ! ");
-                    player.hp -= monsterCapacites[1].valeurAttaque / 2;
+                    player.hp -= ((monsterCapacites[1].valeurAttaque * monstres.force) /5) / 2;
                 }else{
-                    player.hp -= monsterCapacites[1].valeurAttaque;
+                    player.hp -= (monsterCapacites[1].valeurAttaque * monstres.force) /5;
                 }
             }
         }
