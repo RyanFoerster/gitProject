@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Player {
     int level           = 1;
@@ -41,16 +42,16 @@ public class Player {
     public static ArrayList<String> attack(String element){
         ArrayList<String> attack = new ArrayList<String>();
 
-        if(element == "Feu"){
+        if(Objects.equals(element, "Feu")){
             attack.add("Lance flamme");
             attack.add("Flammèche");
-        }else if(element == "Eau"){
+        }else if(Objects.equals(element, "Eau")){
             attack.add("Hydrocanon");
             attack.add("Bulle d'O");
-        }else if(element == "Terre"){
+        }else if(Objects.equals(element, "Terre")){
             attack.add("Seisme");
             attack.add("Cailloux");
-        }else if (element == "Plante"){
+        }else if (Objects.equals(element, "Plante")){
             attack.add("Graine");
             attack.add("Rayon de soleil");
         }

@@ -111,7 +111,7 @@ public class InfoCombat {
 
         int range                = 2;
         int min                  = 1;
-        int rand                 = 0;
+        int rand;
         rand = (int) (Math.random() * range) + min;
 
         fonction.print(rand);

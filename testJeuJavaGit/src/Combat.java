@@ -68,16 +68,12 @@ public class Combat{
                 userInputChoose = 0;
             }
 
-            if(userInputChoose == 1){
-
-            }
-
         }while (isAlive || userAlive);
 
-        if(isAlive == false){
+        if(!isAlive){
             fonction.print("Vous avez battu : " + monster.nom);
             fonction.print("Vous avez gagner : " + (monster.level * 100) / 5 + " expériences");
-        }else if(userAlive == false){
+        }else if(!userAlive){
             fonction.print("Vous avez été battu par : " + monster.nom);
         }else if(rand != 5){
             fonction.print("Vous avez fui !");
