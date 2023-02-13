@@ -106,4 +106,41 @@ public class InfoCombat {
             }
         }
     }
+
+    public static void infoCombatMonster(Monstres monstres, Capacites[] monsterCapacites, Player player){
+
+        int range                = 2;
+        int min                  = 1;
+        int rand                 = 0;
+        rand = (int) (Math.random() * range) + min;
+
+        fonction.print(rand);
+
+        if(Objects.equals(monstres.element, "Feu")){
+            if(rand == 1){
+                fonction.print(monstres.nom + " attaque : " + monsterCapacites[0].nom);
+                if(Objects.equals(player.element, "Plante")){
+                    fonction.print("C'est super efficace ! ");
+                    player.hp -= monsterCapacites[0].valeurAttaque * 2;
+                }else if(Objects.equals(player.element, "Eau")){
+                    fonction.print("C'est pas très efficace ! ");
+                    player.hp -= monsterCapacites[0].valeurAttaque / 2;
+                }else{
+                    player.hp -= monsterCapacites[0].valeurAttaque;
+                }
+            }
+            if(rand == 2){
+                fonction.print(monstres.nom + " attaque : " + monsterCapacites[1].nom);
+                if(Objects.equals(player.element, "Plante")){
+                    fonction.print("C'est super efficace ! ");
+                    player.hp -= monsterCapacites[1].valeurAttaque * 2;
+                }else if(Objects.equals(player.element, "Eau")){
+                    fonction.print("C'est pas très efficace ! ");
+                    player.hp -= monsterCapacites[1].valeurAttaque / 2;
+                }else{
+                    player.hp -= monsterCapacites[1].valeurAttaque;
+                }
+            }
+        }
+    }
 }

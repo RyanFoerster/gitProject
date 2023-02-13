@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Combat{
 
-    public static boolean combat(Monstres monster, Player player, Capacites[] userCapacites){
+    public static boolean combat(Monstres monster, Player player, Capacites[] userCapacites, Capacites[] monsterCapacites){
 
         boolean isAlive          = true;
         boolean userAlive        = true;
@@ -13,9 +13,11 @@ public class Combat{
         int range                = max -min + 1; 
         int rand                 = 0;
 
+        fonction.print("Nouveau combat contre : " + monster.nom + " - Lvl " + monster.level + " - Hp " + monster.hp);
         do{
             
-            fonction.print("Nouveau combat contre : " + monster.nom + " - Lvl " + monster.level + " - Hp " + monster.hp);
+            fonction.print(monster.nom + " - Lvl " + monster.level + " - Hp " + monster.hp);
+            fonction.print(player.name + " - Lvl " + player.level + " - Hp " + player.hp);
             fonction.print("Que voulez vous faire ?\n1. Attaquer\n2. Info sur le monstre\n3. Se soigner\n4. Fuir ");
             userInputChoose = fonction.entry(userInputChoose);
 
@@ -30,6 +32,7 @@ public class Combat{
                 userInputChoose = fonction.entry(userInputChoose);
 
                 InfoCombat.infoCombat(player, userInputChoose, userCapacites, monster);
+                InfoCombat.infoCombatMonster(monster, monsterCapacites, player );
                 userInputChoose = 0;
                 if(monster.hp <= 0){
                     isAlive = false;
@@ -48,6 +51,8 @@ public class Combat{
                     if(player.hp > 100){
                         player.hp = 100;
                     }
+                }else{
+                    fonction.print("Vous n'avez plus de quoi vous soigner ! ");
                 }
                 userHeal--;
                 userInputChoose = 0;
@@ -61,6 +66,10 @@ public class Combat{
                     break;
                 }
                 userInputChoose = 0;
+            }
+
+            if(userInputChoose == 1){
+
             }
 
         }while (isAlive || userAlive);

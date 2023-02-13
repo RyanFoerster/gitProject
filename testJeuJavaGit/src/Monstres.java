@@ -16,7 +16,7 @@ public class Monstres {
     public static Monstres newMonstres(int randChoose){
 
         if(randChoose == 1){
-            Monstres eauQuiPique = new Monstres("EauKiPik", "Eau", 1, 100, 2);
+            Monstres eauQuiPique = new Monstres("EauKiPik", "Feu", 1, 100, 2);
             return eauQuiPique;
         }
 

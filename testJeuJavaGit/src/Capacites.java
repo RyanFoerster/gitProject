@@ -48,7 +48,7 @@ public class Capacites {
         if(Objects.equals(element, "Feu") && monsterCapacites[0] == null){
             Capacites braise = new Capacites("Braise", "Feu", 5);
             return braise;
-        }else if(Objects.equals(element, "Feu") && monsterCapacites[0] == null){
+        }else if(Objects.equals(element, "Feu") && monsterCapacites[0] != null){
             Capacites flammeche = new Capacites("Flammèche", "Feu", 5);
             return flammeche;
         }

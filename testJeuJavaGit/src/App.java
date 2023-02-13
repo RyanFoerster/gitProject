@@ -1,5 +1,3 @@
-
-
 public class App {
     public static void main(String[] args) throws Exception {
     
@@ -41,8 +39,11 @@ public class App {
         fonction.print("Hp : " + player.hp);
         
         Monstres monster = Monstres.newMonstres(1);
+        monsterCapacites[0] = Capacites.newCapacitesMonster(element, monsterCapacites);
+        monsterCapacites[1] = Capacites.newCapacitesMonster(element, monsterCapacites);
 
-        Combat.combat(monster, player,userCapacites);
+
+        Combat.combat(monster, player,userCapacites, monsterCapacites);
 
     }
 }
