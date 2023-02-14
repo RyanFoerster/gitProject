@@ -15,8 +15,9 @@ public class Capacites {
     }
 
     public static Capacites newCapacites(String element, Capacites[] userCapacites){
+
         if(Objects.equals(element, "Feu") && userCapacites[0] == null ){
-            Capacites lanceFlamme = new Capacites("Lance flamme", "Feu", 5);
+            Capacites lanceFlamme = new Capacites("Lance flamme", "Feu", 25);
             return lanceFlamme;
         }else if(Objects.equals(element, "Feu") && userCapacites[0] != null){
             Capacites volcano = new Capacites("Volcano", "Feu", 5);
@@ -40,6 +41,7 @@ public class Capacites {
             Capacites rayonDeSoleil = new Capacites("Rayon de soleil", "Plante", 5);
             return rayonDeSoleil;
         }
+
 
         return null;
     }

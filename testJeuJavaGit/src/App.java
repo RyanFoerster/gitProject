@@ -8,6 +8,7 @@ public class App {
         String element                  = " ";
         Capacites[] userCapacites       = new Capacites[2];
         Capacites[] monsterCapacites    = new Capacites[2];
+        boolean isFinish = false;
 
         fonction.print("Saisir votre nom");
         name = fonction.entry(name);
@@ -33,19 +34,22 @@ public class App {
         userCapacites[0] = Capacites.newCapacites(element, userCapacites);
         userCapacites[1] = Capacites.newCapacites(element, userCapacites);
 
-        fonction.print("Nom : " + player.name);
-        fonction.print("Element : " + player.element);
-        fonction.print("Niveau : " + player.level);
-        fonction.print("Hp : " + player.hp);
-        
-        Monstres monster = Monstres.newMonstres(2);
-        monsterCapacites[0] = Capacites.newCapacitesMonster(element, monsterCapacites);
-        monsterCapacites[1] = Capacites.newCapacitesMonster(element, monsterCapacites);
+        do {
+            fonction.print("Nom : " + player.name);
+            fonction.print("Element : " + player.element);
+            fonction.print("Niveau : " + player.level);
+            fonction.print("Hp : " + player.hp);
+            fonction.print("Force : " + player.force + "\n");
+
+            Monstres monster = Monstres.newMonstres(2);
+            monsterCapacites[0] = Capacites.newCapacitesMonster(element, monsterCapacites);
+            monsterCapacites[1] = Capacites.newCapacitesMonster(element, monsterCapacites);
 
 
-        Combat.combat(monster, player,userCapacites, monsterCapacites);
-        Player.lvlUp(player);
+            isFinish = Combat.combat(monster, player,userCapacites, monsterCapacites);
 
+            Player.lvlUp(player);
+        }while(!isFinish);
     }
 }
 
