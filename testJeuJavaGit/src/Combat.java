@@ -36,7 +36,7 @@ public class Combat{
                 userInputChoose = 0;
                 if(monster.hp <= 0){
                     isAlive = false;
-                    player.exp += (monster.level * 1000) / 5;
+                    player.exp += (monster.level * 100) / 5;
                 }
 
                 if(player.hp <= 0){
@@ -76,7 +76,7 @@ public class Combat{
 
         if(!isAlive){
             fonction.print("Vous avez battu : " + monster.nom);
-            fonction.print("Vous avez gagner : " + (monster.level * 1000) / 5 + " expériences");
+            fonction.print("Vous avez gagner : " + (monster.level * 100) / 5 + " expériences");
         }else if(!userAlive){
             fonction.print("Vous avez été battu par : " + monster.nom);
         }else if(rand != 5){

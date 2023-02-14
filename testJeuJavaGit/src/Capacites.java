@@ -46,9 +46,9 @@ public class Capacites {
         return null;
     }
 
-    public static Capacites newCapacitesMonster(String element, Capacites[] monsterCapacites){
+    public static Capacites newCapacitesMonster(String element, Capacites[] monsterCapacites, Monstres monster){
         if(Objects.equals(element, "Feu") && monsterCapacites[0] == null){
-            Capacites braise = new Capacites("Braise", "Feu", 5);
+            Capacites braise = new Capacites("Braise", "Feu", (int) ((5 * monster.force) / 1.8));
             return braise;
         }else if(Objects.equals(element, "Feu") && monsterCapacites[0] != null){
             Capacites flammeche = new Capacites("Flammèche", "Feu", 5);
