@@ -38,12 +38,13 @@ public class App {
         fonction.print("Niveau : " + player.level);
         fonction.print("Hp : " + player.hp);
         
-        Monstres monster = Monstres.newMonstres(1);
+        Monstres monster = Monstres.newMonstres(2);
         monsterCapacites[0] = Capacites.newCapacitesMonster(element, monsterCapacites);
         monsterCapacites[1] = Capacites.newCapacitesMonster(element, monsterCapacites);
 
 
         Combat.combat(monster, player,userCapacites, monsterCapacites);
+        Player.lvlUp(player);
 
     }
 }

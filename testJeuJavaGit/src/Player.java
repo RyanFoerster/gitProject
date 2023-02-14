@@ -58,5 +58,13 @@ public class Player {
 
         return attack;
     }
-    
+
+    public static boolean lvlUp(Player player){
+        boolean lvlUp = false;
+        if(player.exp >= 100){
+            lvlUp = true;
+            fonction.print("Vous êtes montés de lvl ! ");
+        }
+        return  lvlUp;
+    }
 }

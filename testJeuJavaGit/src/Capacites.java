@@ -51,6 +51,24 @@ public class Capacites {
         }else if(Objects.equals(element, "Feu") && monsterCapacites[0] != null){
             Capacites flammeche = new Capacites("Flammèche", "Feu", 5);
             return flammeche;
+        }else if (Objects.equals(element, "Eau") && Objects.equals(monsterCapacites[0], null)){
+            Capacites canonDeau = new Capacites("Canon d'eau", "Eau", 5);
+            return canonDeau;
+        }else if(Objects.equals(element, "Eau") && monsterCapacites[0] != null){
+            Capacites piscine = new Capacites("Piscine", "Eau", 5);
+            return piscine;
+        } else if (Objects.equals(element, "Terre") && monsterCapacites[0] == null) {
+            Capacites plaqueTecto = new Capacites("Plaque tectonique", "Terre", 5);
+            return plaqueTecto;
+        } else if (Objects.equals(element, "Terre") && monsterCapacites[0] != null) {
+            Capacites tunnel = new Capacites("Tunnel", "Terre", 5);
+            return tunnel;
+        } else if (Objects.equals(element, "Plante") && monsterCapacites[0] == null) {
+            Capacites graine = new Capacites("Graine", "Plante", 5);
+            return graine;
+        } else if (Objects.equals(element, "Plante") && monsterCapacites[0] != null) {
+            Capacites lanceTerre = new Capacites("Lance terre", "Plante", 5);
+            return lanceTerre;
         }
         return  null;
     }
