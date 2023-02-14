@@ -114,8 +114,6 @@ public class InfoCombat {
         int rand;
         rand = (int) (Math.random() * range) + min;
 
-        fonction.print(rand);
-
         if(Objects.equals(monstres.element, "Feu")){
             if(rand == 1){
                 fonction.print(monstres.nom + " attaque : " + monsterCapacites[0].nom);

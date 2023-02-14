@@ -85,8 +85,8 @@ public class App {
                     fonction.print("\n");
 
                     Monstres monster = Monstres.newMonstres(2);
-                    monsterCapacites[0] = Capacites.newCapacitesMonster(element, monsterCapacites, monster);
-                    monsterCapacites[1] = Capacites.newCapacitesMonster(element, monsterCapacites, monster);
+                    monsterCapacites[0] = Capacites.newCapacitesMonster(monster.element, monsterCapacites, monster);
+                    monsterCapacites[1] = Capacites.newCapacitesMonster(monster.element, monsterCapacites, monster);
 
 
                     isFinish = Combat.combat(monster, player,userCapacites, monsterCapacites);

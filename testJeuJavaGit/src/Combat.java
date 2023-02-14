@@ -27,51 +27,49 @@ public class Combat{
                 userInputChoose = fonction.entry(userInputChoose);
             }
 
-            if(userInputChoose == 1){
-                fonction.print("Choisisser votre attaque : \n1. " + userCapacites[0].nom + "\n2. " + userCapacites[1].nom);
-                userInputChoose = fonction.entry(userInputChoose);
-
-                InfoCombat.infoCombat(player, userInputChoose, userCapacites, monster);
-                InfoCombat.infoCombatMonster(monster, monsterCapacites, player );
-                userInputChoose = 0;
-                if(monster.hp <= 0){
-                    isAlive = false;
-                    player.exp += (monster.level * 100) / 5;
-                }
-
-                if(player.hp <= 0){
-                    userAlive = false;
-                }
-            }
-
-            if(userInputChoose == 2){
-                InfoMonster.infoMonster(monster);
-                userInputChoose = 0;
-            }
-
-            if(userInputChoose == 3){
-                if(userHeal > 0){
-                    player.hp += 50;
-                    if(player.hp > 100){
-                        player.hp = 100;
+            switch (userInputChoose) {
+                case 1 -> {
+                    fonction.print("Choisisser votre attaque : \n1. " + userCapacites[0].nom + "\n2. " + userCapacites[1].nom);
+                    userInputChoose = fonction.entry(userInputChoose);
+                    InfoCombat.infoCombat(player, userInputChoose, userCapacites, monster);
+                    InfoCombat.infoCombatMonster(monster, monsterCapacites, player);
+                    userInputChoose = 0;
+                    if (monster.hp <= 0) {
+                        isAlive = false;
+                        player.exp += (monster.level * 100) / 5;
                     }
-                }else{
-                    fonction.print("Vous n'avez plus de quoi vous soigner ! ");
+                    if (player.hp <= 0) {
+                        userAlive = false;
+                    }
                 }
-                userHeal--;
-                userInputChoose = 0;
-            }
-
-            if(userInputChoose == 4){
-                rand = (int) (Math.random() * range) + min;
-                if(rand == 5){
-                    fonction.print("Vous n'avez pas réussi à fuir ! ");
-                }else{
-                    break;
+                case 2 -> {
+                    InfoMonster.infoMonster(monster);
+                    userInputChoose = 0;
                 }
-                userInputChoose = 0;
+                case 3 -> {
+                    if (userHeal > 0) {
+                        player.hp += 50;
+                        if (player.hp > 100) {
+                            player.hp = 100;
+                        }
+                        userHeal--;
+                        InfoCombat.infoCombatMonster(monster, monsterCapacites, player);
+                    } else {
+                        fonction.print("Vous n'avez plus de quoi vous soigner ! ");
+                    }
+                    userInputChoose = 0;
+                }
+                case 4 -> {
+                    rand = (int) (Math.random() * range) + min;
+                    if (rand == 5) {
+                        fonction.print("Vous n'avez pas réussi à fuir ! ");
+                        InfoCombat.infoCombatMonster(monster, monsterCapacites, player);
+                    } else {
+                        break;
+                    }
+                    userInputChoose = 0;
+                }
             }
-
         }while (isAlive && userAlive);
 
         if(!isAlive){
