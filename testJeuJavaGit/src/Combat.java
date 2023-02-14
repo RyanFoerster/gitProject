@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Combat{
 
-    public static boolean combat(Monstres monster, Player player, Capacites[] userCapacites, Capacites[] monsterCapacites){
+    public static Boolean combat(Monstres monster, Player player, Capacites[] userCapacites, Capacites[] monsterCapacites){
 
         boolean isAlive          = true;
         boolean userAlive        = true;
@@ -82,8 +82,6 @@ public class Combat{
         }else if(rand != 5){
             fonction.print("Vous avez fui !");
         }
-       
-
         return isAlive;
     }
 }

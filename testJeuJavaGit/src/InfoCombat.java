@@ -142,5 +142,32 @@ public class InfoCombat {
                 }
             }
         }
+
+        if(Objects.equals(monstres.element, "Eau")){
+            if(rand == 1){
+                fonction.print(monstres.nom + " attaque : " + monsterCapacites[0].nom);
+                if(Objects.equals(player.element, "Feu")){
+                    fonction.print("C'est super efficace ! ");
+                    player.hp -= ((monsterCapacites[0].valeurAttaque * monstres.force) /5) * 2;
+                }else if(Objects.equals(player.element, "Plante")){
+                    fonction.print("C'est pas très efficace ! ");
+                    player.hp -= ((monsterCapacites[0].valeurAttaque * monstres.force) /5) / 2;
+                }else{
+                    player.hp -= monsterCapacites[0].valeurAttaque * monstres.force /5;
+                }
+            }
+            if(rand == 2){
+                fonction.print(monstres.nom + " attaque : " + monsterCapacites[1].nom);
+                if(Objects.equals(player.element, "Feu")){
+                    fonction.print("C'est super efficace ! ");
+                    player.hp -= ((monsterCapacites[1].valeurAttaque * monstres.force) /5) * 2;
+                }else if(Objects.equals(player.element, "Plante")){
+                    fonction.print("C'est pas très efficace ! ");
+                    player.hp -= ((monsterCapacites[1].valeurAttaque * monstres.force) /5) / 2;
+                }else{
+                    player.hp -= (monsterCapacites[1].valeurAttaque * monstres.force) /5;
+                }
+            }
+        }
     }
 }

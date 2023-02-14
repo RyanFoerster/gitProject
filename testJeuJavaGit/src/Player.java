@@ -64,6 +64,8 @@ public class Player {
         if(player.exp >= 100){
             lvlUp = true;
             fonction.print("Vous êtes montés de lvl ! ");
+            player.force *= 1.2;
+            player.level++;
         }
         return  lvlUp;
     }

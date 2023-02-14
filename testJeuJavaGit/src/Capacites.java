@@ -15,8 +15,9 @@ public class Capacites {
     }
 
     public static Capacites newCapacites(String element, Capacites[] userCapacites){
+
         if(Objects.equals(element, "Feu") && userCapacites[0] == null ){
-            Capacites lanceFlamme = new Capacites("Lance flamme", "Feu", 5);
+            Capacites lanceFlamme = new Capacites("Lance flamme", "Feu", 25);
             return lanceFlamme;
         }else if(Objects.equals(element, "Feu") && userCapacites[0] != null){
             Capacites volcano = new Capacites("Volcano", "Feu", 5);
@@ -41,12 +42,13 @@ public class Capacites {
             return rayonDeSoleil;
         }
 
+
         return null;
     }
 
-    public static Capacites newCapacitesMonster(String element, Capacites[] monsterCapacites){
+    public static Capacites newCapacitesMonster(String element, Capacites[] monsterCapacites, Monstres monster){
         if(Objects.equals(element, "Feu") && monsterCapacites[0] == null){
-            Capacites braise = new Capacites("Braise", "Feu", 5);
+            Capacites braise = new Capacites("Braise", "Feu", (int) ((5 * monster.force) / 1.8));
             return braise;
         }else if(Objects.equals(element, "Feu") && monsterCapacites[0] != null){
             Capacites flammeche = new Capacites("Flammèche", "Feu", 5);
